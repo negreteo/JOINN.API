@@ -1,4 +1,5 @@
 using JOINN.Data;
+using JOINN.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,8 @@ namespace JOINN.API
             opts.EnableDetailedErrors ();
             opts.UseSqlServer (Configuration.GetConnectionString ("joinn.dev"));
          });
+
+         services.AddTransient<IRegionService, RegionService> ();
       }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

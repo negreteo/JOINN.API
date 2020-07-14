@@ -30,6 +30,7 @@ namespace JOINN.API
          });
 
          services.AddTransient<IRegionService, RegionService> ();
+         services.AddTransient<ISolutionService, SolutionService> ();
       }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -47,7 +47,8 @@ namespace JOINN.API
          // Place before UserRouting and before UseAuthorization
          app.UseCors (builder => builder
             .WithOrigins (
-               "http://localhost:8080"
+               "http://localhost:8080",
+               "http://localhost:4200"
             )
             .AllowAnyMethod ()
             .AllowAnyHeader ()
